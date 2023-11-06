@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Lora:wght@400;500;600;700&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900;6..12,1000&display=swap");
+
+/* ------- Variables --------- */
+
+/***** Color variables *****/
+:root {
+  --color-primary: #232730;
+  --color-secondary: #f8d7a4;
+  --title-secondary: #c7763e;
+  --title-color: #a55c30;
+  --text-color: #19314b;
+  --color-white: #fff;
+}
+
+/***** Font variable *****/
+
+:root {
+  --font-family-lato: "Lato", sans-serif;
+  --font-family-lora: "Lora", serif;
+  --font-family-noto: "Noto Sans", sans-serif;
+  --font-family-nunito: "Nunito Sans", sans-serif;
+}
+
+/* ------ Reset CSS ------ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5% !important;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #fffefc;
+}
+
+header,
+main,
+footer,
+section {
+  max-width: 1440px;
+  margin-inline: auto !important;
+}
+
+.nav-primary,
+.hero,
+.about__container,
+.services__container {
+  max-width: 1190px;
+  margin-inline: auto;
+}
+
+.title {
+  color: var(--title-color);
+  font-family: var(--font-family-lora);
+}
+
+/* ====== Hero Section ===== */
+
+.nav-primary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-parimary__links {
+  display: flex;
+  gap: 3rem;
+}
+
+.nav-primary__logo {
+  color: var(--title-color);
+  font-family: var(--font-family-lora);
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.logo-text-1 {
+  color: var(--title-color);
+  font-family: var(--font-family-lora);
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.logo-text-2 {
+  color: var(--title-color);
+  font-family: var(--font-family-lora);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.nav-parimary__link {
+  color: var(--color-primary);
+  font-family: var(--font-family-noto);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.nav-parimary__link.active {
+  color: var(--title-color);
+}
+
+/* */
+
+.header-hero {
+  position: relative;
+}
+
+.hero__bg-image {
+  transform: rotate(0deg);
+  position: absolute;
+  right: 0;
+}
+
+.hero__content-left--line {
+  position: absolute;
+  padding-top: 2rem;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero__content-title {
+  color: var(--color-primary);
+  font-family: var(--font-family-lora);
+  font-size: 64px;
+  font-weight: 700;
+  max-width: 520px;
+  margin-left: 3rem;
+}
+
+.hero__image {
+  padding-top: 140px;
+}
+
+.hero__image-img {
+  position: relative;
+}
+
+/* ====== About Section */
+.about {
+  margin-top: 180px;
+}
+
+.about__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 120px;
+}
+
+.about-img {
+  width: 580px;
+  height: 523.481px;
+}
+
+.about__content-title {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.about__content-description {
+  color: var(--color-primary);
+  font-family: var(--font-family-nunito);
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 480px;
+}
+
+/* ====== Services Section */
+.service {
+  margin-top: 80px;
+  background-image: url(image/services-bg-img.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.services__cards {
+  display: flex;
+  padding: 70px 0 120px 0;
+  margin-inline: auto;
+}
+
+.services__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+  margin-inline: auto;
+}
+
+.services__content-title {
+  padding-top: 107px;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.services__card-content__description {
+  color: #fff;
+  font-family: var(--font-family-nunito);
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 311px;
+}
+
+.services__card-content__description span {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* ====== Fleet Section ===== */
