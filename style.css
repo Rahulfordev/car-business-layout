@@ -247,7 +247,12 @@ section {
   align-items: center;
   gap: 120px;
 }
-
+@media screen and (max-width: 360px) {
+  .about__container {
+    flex-direction: column;
+    gap: 0px;
+  }
+}
 .about-img {
   width: 580px;
   height: 523.481px;
@@ -278,6 +283,13 @@ section {
   display: flex;
   padding: 70px 0 120px 0;
   margin-inline: auto;
+}
+
+@media screen and (max-width: 360px) {
+  .services__cards {
+    flex-direction: column;
+    gap: 0px;
+  }
 }
 
 .services__card {
@@ -318,6 +330,13 @@ section {
   align-items: center;
   margin-inline: auto;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 360px) {
+  .fleet__cards {
+    flex-direction: column;
+    gap: 0px;
+  }
 }
 
 .fleet__container-title {
