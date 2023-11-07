@@ -110,6 +110,9 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 60px;
+  background: #fff;
+  box-shadow: 0px 2px 4px 0px rgba(214, 217, 223, 0.4);
 }
 
 .menu-bar {
@@ -160,6 +163,13 @@ section {
 }
 
 @media screen and (max-width: 900px) {
+  .nav-primary {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 5;
+  }
+
   .nav-primary__logo,
   .hero__bg-image {
     display: none;
@@ -176,23 +186,37 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(8px);
+    background: rgba(12, 12, 12, 0.95);
+    mix-blend-mode: multiply;
+    backdrop-filter: blur(25px);
     width: 100%;
     height: 100vh;
     transition: left 0.5s ease;
+    z-index: 10;
   }
+
   .nav-links.mobile-menu {
     left: 0;
   }
+
   .nav-parimary__links {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3rem;
   }
+
+  .nav-parimary__link {
+    color: var(--color-white);
+  }
+
+  .nav-parimary__link:hover {
+    background-color: #c7763e;
+  }
+
   .menu-bar {
     display: block;
+    z-index: 20;
   }
 }
 
@@ -206,6 +230,18 @@ section {
   transform: rotate(0deg);
   position: absolute;
   right: 0;
+}
+
+.hero__content-left--line__mobile {
+  display: none;
+}
+
+.hero__bg-image-mobile {
+  display: none;
+}
+
+.hero__content-left--line__desktops {
+  display: block;
 }
 
 .hero__content-left--line {
@@ -236,6 +272,50 @@ section {
   position: relative;
 }
 
+@media screen and (max-width: 360px) {
+  .header-hero {
+    margin-top: 100px;
+  }
+
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  .hero__image {
+    padding-top: 0px;
+  }
+
+  .hero__image-img {
+    display: none;
+  }
+
+  .hero__content-left--line {
+    padding-top: 0px;
+  }
+
+  .hero__content-left--line__desktops {
+    display: none;
+  }
+
+  .hero__content-left--line__mobile {
+    display: block;
+  }
+
+  .hero__bg-image-mobile {
+    display: block;
+  }
+
+  .hero__content-title {
+    font-size: 32px;
+    max-width: 280px;
+  }
+  .title {
+    font-size: 32px !important;
+  }
+}
+
 /* ====== About Section */
 .about {
   margin-top: 180px;
@@ -247,15 +327,14 @@ section {
   align-items: center;
   gap: 120px;
 }
-@media screen and (max-width: 360px) {
-  .about__container {
-    flex-direction: column;
-    gap: 0px;
-  }
-}
+
 .about-img {
   width: 580px;
   height: 523.481px;
+}
+
+.mobile-about-img {
+  display: none;
 }
 
 .about__content-title {
@@ -271,6 +350,33 @@ section {
   max-width: 480px;
 }
 
+@media screen and (max-width: 360px) {
+  .about {
+    margin-top: 60px;
+  }
+
+  .about__container {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .about-img {
+    display: none;
+  }
+
+  .mobile-about-img {
+    display: block;
+  }
+
+  .about__content {
+    text-align: center;
+  }
+
+  .about__content-title {
+    padding: 22px 0 16px 0;
+  }
+}
+
 /* ====== Services Section */
 .service {
   margin-top: 80px;
@@ -283,13 +389,6 @@ section {
   display: flex;
   padding: 70px 0 120px 0;
   margin-inline: auto;
-}
-
-@media screen and (max-width: 360px) {
-  .services__cards {
-    flex-direction: column;
-    gap: 0px;
-  }
 }
 
 .services__card {
@@ -320,6 +419,46 @@ section {
   font-weight: 700;
 }
 
+.service__card-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 360px) {
+  .service {
+    margin-top: 30px;
+    background-image: url(image/mobile-services-bg-img.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .service {
+    margin-top: 20px;
+    background-position: center;
+  }
+
+  .services__cards {
+    flex-direction: column;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .service__card-mobile {
+    display: block;
+  }
+
+  .service__card-desktop {
+    display: none;
+  }
+
+  .services__card-content__description {
+    font-size: 14px;
+  }
+
+  .services__card-content__description span {
+    font-size: 16px;
+  }
+}
+
 /* ====== Fleet Section ===== */
 .fleet {
   margin: 80px 0 50px 0;
@@ -333,9 +472,12 @@ section {
 }
 
 @media screen and (max-width: 360px) {
+  .fleet {
+    margin: 0px 0 50px 0;
+  }
   .fleet__cards {
     flex-direction: column;
-    gap: 0px;
+    gap: 20px;
   }
 }
 
