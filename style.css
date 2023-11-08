@@ -220,7 +220,7 @@ section {
   }
 }
 
-/* */
+/*====== Hero Section ====== */
 
 .header-hero {
   position: relative;
@@ -272,7 +272,7 @@ section {
   position: relative;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .header-hero {
     margin-top: 100px;
   }
@@ -350,7 +350,7 @@ section {
   max-width: 480px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .about {
     margin-top: 60px;
   }
@@ -423,7 +423,7 @@ section {
   display: none;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .service {
     margin-top: 30px;
     background-image: url(image/mobile-services-bg-img.png);
@@ -469,16 +469,6 @@ section {
   align-items: center;
   margin-inline: auto;
   justify-content: space-between;
-}
-
-@media screen and (max-width: 400px) {
-  .fleet {
-    margin: 0px 0 50px 0;
-  }
-  .fleet__cards {
-    flex-direction: column;
-    gap: 20px;
-  }
 }
 
 .fleet__container-title {
@@ -545,4 +535,14 @@ section {
   font-size: 14px;
   font-weight: 400;
   display: inline-block;
+}
+
+@media screen and (max-width: 600px) {
+  .fleet {
+    margin: 0px 0 50px 0;
+  }
+  .fleet__cards {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
